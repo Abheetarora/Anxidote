@@ -1,22 +1,8 @@
 body{
-    height:100%;
+    background: url("../images/front.jpg")
+        no-repeat center center fixed;
+    background-size: cover;
 }
-
-video{
-position: fixed;
-    top:50%;
-    left:50%;
-    margin-top: -50%;
-    margin-left: -50%;
-    z-index: 1;
-    }
-
-div{
-    position: relative;
-    z-index: 2;
-    }
-
-
 
 .navbar{
     position: fixed;
@@ -28,7 +14,7 @@ div{
     background-color: #D4D7DE;
     width: 100%;
     height: 70px;
-    z-index: 2;
+    z-index: 1;
 }
 .nav{
     display: flex;
@@ -59,12 +45,18 @@ a:hover{
     color: #000;
 }
 
-h1{
-    color: whitesmoke;
+.center{
     text-align: center;
-    background-color: black;
+    
+}
+
+h2{  
+     color: wheat;
+    text-align: center;
     font-family: 'Nerko One', cursive;
     margin: 0 auto;
     margin-top: 280px;
     font-size: 4em;
 }
+
+
