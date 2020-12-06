@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="start">Start Quiz!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"> <p> Question  </p></div>
+        
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('Did not apply to me at all')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('Applied to me to some degree')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('Applied to me to more degree')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('Applied to me most of the time')"></div>
+            </div>
+           
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
