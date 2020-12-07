@@ -1,11 +1,14 @@
 body{
     font-size: 20px;
-    font-family: monospace;
+    font-family: font-family: 'Playfair Display SC', serif;
+     background: url("../images/pexels-david-bartus-1166209.jpg")
+        no-repeat center center fixed;
+    background-size: cover;
 }
 
 #container{
     margin : 150px auto;
-    background-color: rgb(250, 252, 143);
+    background-color: #f9ecf9;
     height: 300px;
     width : 700px;
     border-radius: 5px;
@@ -13,24 +16,23 @@ body{
     position: relative;
 }
 #start{
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bolder;
     word-break: break-all;
     width:100px;
-    height:150px;
-    border : 2px solid lightgrey;
+    height:100px;
+    border : 2px solid white;
     text-align: center;
     cursor: pointer;
     position: absolute;
     left:300px;
     top:50px;
-    color : lightgrey;
+    color : rebeccapurple;
 }
 #start:hover{
-    border: 3px solid lightseagreen;
-    color : lightseagreen;
+    border: 3px solid purple;
+    color : purple;
 }
-
 #question{
     width:670px;
     height : 125px;
