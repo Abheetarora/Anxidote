@@ -116,6 +116,7 @@ body{
 .choice:hover{
     border : 2px solid rgb(139, 62, 133);
     font-weight: bold;
+	box-shadow: 0 0 50px lightcoral;
 }
 
 #progress{
