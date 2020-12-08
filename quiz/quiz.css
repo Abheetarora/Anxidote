@@ -74,6 +74,7 @@ body{
 #start:hover{
     border: 3px solid purple;
     color : purple;
+	box-shadow: 0 0 50px lightcoral;
 }
 #question{
     width:670px;
