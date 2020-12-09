@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>ANXIDOTE</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
 	<link href="slider.css" rel="stylesheet">
 </head>
+
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="slider.html">ANXIDOTE</a> 
-			
+			<a class="navbar-brand" href="slider.html">ANXIDOTE</a>
+
 			<ul class="navbar-nav ml-auto">
-				
+
 				<li class="nav-item">
 					<a class="nav-link" href="quiz/quiz.html">SURVEY</a>
 				</li>
-				
+
 			</ul>
 		</div>
-    </nav>
-    
+	</nav>
+
 	<div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
 		<ol class="carousel-indicators">
 			<li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"></li>
@@ -29,70 +31,125 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img alt="First slide" class="d-block w-100" src="front.jpg">
+				<img alt="First slide" class="d-block w-100" src="img/front.jpg">
 				<div class="carousel-caption d-none d-md-block">
-					
-					<div class="row">
-						<div class="col-md-12"> <h2>Welcome to Anxidote!</h2></div>
-					</div>
-    
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img alt="Second slide" class="d-block w-100" src="img2.png">
-				<div class="carousel-caption d-none d-md-block">
-					<br><h4><blockquote>WHAT IS ANXIETY ?</blockquote></h4></br>
-					<p>Anxiety is your body’s natural response to stress, when a person regularly feels disproportionate levels of anxiety, it might become a medical disorder.</p>
 
-					<h4>CAUSES</h4>  
-					    <ul class="b">
-						<li>Emotional trauma</li>
-						<li>Financial concerns</li>
-						<li>Side effect of certain medications</li>
-						<li>Lack of oxygen</li>
-						<li>And the list goes on..</li>
-					    </ul>
-					 <h4>SYMPTOMS</h4>  
-					    <ul class="b">
-						<li>Increased heart rate</li>
-						<li>Rapid breathing</li>
-						<li>Restlessness</li>
-						<li>Trouble concentrating</li>
-						<li>Difficulty falling asleep</li>
-					    </ul>
-					<p><b><blockquote>Everyone has anxiety from time to time, but chronic anxiety can interfere with your quality of life.</blockquote></b></p>
-					<br>
-					<p><b><blockquote>TAKE OUR SURVEY TO CHECK YOUR ANXIETY LEVEL</blockquote></b></p>
+					<div class="row">
+						<div class="col-md-12">
+							<h2>Welcome to Anxidote!</h2>
+						</div>
+					</div>
+
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img alt="Third slide" class="d-block w-100" src="pexels-pok-rie-1655166.jpg">
+				<img alt="Second slide" class="d-block w-100" style="height: 800px;" src="https://cdn.pixabay.com/photo/2017/03/07/19/33/dandelion-2125034_1280.jpg">
 				<div class="carousel-caption d-none d-md-block">
-                    <h6><blockquote>RESOURCES</blockquote></h6>
-                    <h7>SOME WAYS TO CALM YOURSELF WHEN FEELING ANXIOUS</h7>
-                    <ul class="a">
-                        <li>Exercise daily</li>
-                        <li>Take deep breaths</li>
-                        <li>Count to 10 slowly</li>
-                        <li>Accept that you cannot control everything</li>
-                        <li>Talk to someone</li>
-                    </ul>
-                    <br>
-                    <h7>SOME HELPLINES TO CONTACT IN CASE OF EMERGENCY</h7>  
-                    <ol class="a">
-                        <li>FORTIS STRESS HELPLINE : +91-8376804102</li>
-                        <li>KIRAN MENTAL HEALTH ( GOVT ) : 18005990019</li>
-                        <li>AASRA : 91-9820466726</li>
-                    </ol>
+					<br>
+					<br>
+
+					<div class="card-deck" ,>
+						<div class="card" , style="height: 400px; width: 600px;">
+							<img class="card-img-top" src="img/tension.jpg" style="height: 150px;" alt="Card image cap">
+							<div class="card-body">
+								<h7 class="card-title">TENSION</h7>
+								<p class="card-text">Tension is a feeling of worry and anxiety which makes it difficult for you to relax or nervous worried feeling that makes it impossible for you to relax</p>
+								
+							</div>
+						</div>
+						<div class="card", style="height: 400px; width: 600px;">
+							<img class="card-img-top" src="img/anxiety.webp" style="height: 150px;" alt="Card image cap">
+							<div class="card-body">
+								<h7 class="card-title">ANXIETY</h7>
+								<p class="card-text"> A feeling of apprehension and fear, characterized by physical symptoms such as palpitations, sweating, and feelings of
+								stress.</p>
+								
+								
+							</div>
+						</div>
+						<div class="card" , style="height: 400px; width: 600px;">
+							<img class="card-img-top" src="img/desperate-2293377__480.jpg" style="height: 150px;" alt="Card image cap">
+							<div class="card-body">
+								<h7 class="card-title">DEPRESSION</h7>
+								<p class="card-text">Depression is a mood disorder that involves a persistent feeling of sadness and loss of interest. It is different from
+								the mood fluctuations that people experience in their life.</p>
+								
+							</div>
+						</div>
+					</div>
+					<br><br>
+					<a href="quiz/quiz.html"><button type="button" onclick="quiz" class="btn btn-secondary btn-lg btn-block">
+						TAKE OUR SURVEY TO CHECK YOUR ANXIETY LEVEL </button></a>
+					
+					
 				</div>
 			</div>
-		</div><a class="carousel-control-prev" data-slide="prev" href="#carouselExampleIndicators" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" role="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+			<div class="carousel-item">
+				<img alt="Third slide" class="d-block w-100" src="img/pexels-pok-rie-1655166.jpg">
+				<div class="carousel-caption d-none d-md-block">
+					<br><br>
+					<div class="card-columns">
+						<div class="card">
+							<img class="card-img-top" src="img/yoga.jpg" alt="Card image cap">
+							<div class="card-body">
+								<h7 class="card-title">Resources to reduce your anxiety and stress</h7>
+								<br><br>
+								<div class="list-group">
+									<a href="https://www.youtube.com/watch?v=xDviO3YIJjo" class="list-group-item list-group-item-action list-group-item-primary">Ways to overcome Depression</a> <br>
+									<a href="https://www.youtube.com/watch?v=z6X5oEIg6Ak" class="list-group-item list-group-item-action list-group-item-primary">Meditation videos</a> <br>
+									<a href= "https://adaa.org/understanding-anxiety/myth-conceptions" class="list-group-item list-group-item-action list-group-item-primary">Myths About Anxiety</a>
+								</div>
+								</div>
+						</div>
+						
+						<div class="card">
+							<img class="card-img" src="img/silhouette-3226408__480.webp" style="height: 250px;" alt="Card image">
+							<div class="card-img-overlay">
+							<div class="card-body">	
+								<h7 class="card-text">"Start by doing what's necessary; then do what's possible;
+								and suddenly you are doing the impossible."<br> <i>Francis of Assisi</i> </h7>
+									</div>
+						</div>
+						</div>
+						<div class="card text-center">
+							
+							<div class="card-body">
+								<h8>SOME HELPLINES TO CONTACT IN CASE OF EMERGENCY </h8>
+								<ol class="a">
+									<li>FORTIS STRESS HELPLINE : +91-8376804102</li>
+									<li>KIRAN MENTAL HEALTH ( GOVT ) : 18005990019</li>
+									<li>AASRA : 91-9820466726</li>
+								</ol>
+								</div>
+						</div>
+						
+						
+						<div class="card">
+							<img class="card-img" src="img/112.jpeg" height="150px" alt="Card image">
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/team-386673__480.jpg" height="170px"  alt="Card image">
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/stress release.jpg"  height="170px"  alt="Card image">
+						</div>
+						
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</div><a class="carousel-control-prev" data-slide="prev" href="#carouselExampleIndicators" role="button"><span
+				aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a>
+		<a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" role="button"><span
+				aria-hidden="true" class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-	</script> 
+	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-	</script> 
+	</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 	</script>
 </body>
+
 </html>
