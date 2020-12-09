@@ -219,10 +219,12 @@ function checkAnswer(answer){
     if(runningQuestion <= lastQuestion) {
         renderQuestion();
     } else {
-        scoreRender();
+         myFunc();
     }
 } 
-
+function myFunc() { 
+           window.location.href="../surveyresult.html"; 
+         } 
 
 // score render
 function scoreRender(){
