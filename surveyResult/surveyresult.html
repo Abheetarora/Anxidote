@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Result</title>
+    <script src="RGraph.svg.common.core.js"></script>
+    <script src="RGraph.svg.pie.js"></script>
+    
+    
+</head>
+<body>
+    
+    <style>
+
+        div#meters{
+            position:absolute;
+            background-color: rgb(181, 225, 233);
+            height: 250px;
+            top: 15%;
+            left: 25%;
+            border: white;
+            border-style: ridge;
+            border-width: 8px;
+            border-radius: 10px;
+        }
+    
+        div#meters div {
+            
+            width: 250px;
+            height: 250px;
+            align-items: center;
+        }
+        
+        
+        div#chart-container4,
+        div#chart-container5,
+        div#chart-container6 {
+            position: relative !important;
+            left: 200px !important;
+            top: 280px !important;
+            width: 750px !important;
+            height: 70px !important;
+        }
+        
+        div#chart-container5 {top: 540px !important;}
+        div#chart-container6 {top: 340px !important;}
+
+        img {
+            width: 1500px;
+            height: 740px;
+            opacity: 0.6;
+            padding:0%;
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #ffa600;
+            position: absolute;
+            top: 70%;
+            left: 43%;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 210px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+          }
+          
+          .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          
+          .button span:after {
+            
+            position: absolute;
+            opacity: 0;
+            top: 100px;
+            right: -20px;
+            transition: 0.5s;
+          }
+          .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          
+          .button span:after {
+            
+            position: absolute;
+            opacity: 0;
+            top: 100px;
+            right: -20px;
+            transition: 0.5s;
+          }
+          
+          .button:hover span {
+            padding-right: 13px;
+          }
+          
+          .button:hover span:after {
+            opacity: 1;
+            right: 100px;
+          }
+
+          
+          
+          .button:hover span:after {
+            opacity: 1;
+            right: 100px;
+          }
+
+          h2 {
+            position: absolute;
+            top: 50px;
+            left: 540px;
+            font-family:Arial, Helvetica, sans-serif ;
+            font-size: 25px;
+            color: rgb(20, 5, 54);
+          }
+
+          h1 {
+              position: absolute;
+              top: 470px;
+              left:400px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 20px;
+              color: rgb(102, 2, 2);
+          }
+
+
+    </style>
+
+<img src="surveyresult.jpg" >
+
+    <h2>RESULTS BASED ON YOUR ANSWERS:</h2>
+
+    <div id="meters">
+        <div id="chart-container1"></div>
+        <div id="chart-container2"></div>
+        <div id="chart-container3"></div>
+        <div id="chart-container4"></div>
+    </div>
+
+    <h1>Visit our home page to know more about these issues and ways to cope up!</h1>
+    
+    <button class="button" style="vertical-align:middle" onclick="document.location = 'slider.html'"><span>Home Page </span></button>
+
+
+    <script>
+        // configured to appear as a donut chart. With there being only two
+    // values given to the chart it makes the donut chart look like a
+    // circular Progress bar.
+    pie1 = new RGraph.SVG.Pie({
+        id: 'chart-container1',
+        data: [15,85],
+        options: {
+            colors: ["Crimson", 'transparent'],
+            donut: true,
+            donutWidth: 10
+        }
+    }).on('draw', function (obj)
+    {
+        // This serves as the background for the chart. Just setting the second color of
+        // the Pie chart to gray gives a different style compared to adding this circle
+        // as the 'background'.
+        RGraph.SVG.create({
+            svg: obj.svg,
+            type: 'circle',
+            parent: obj.layers.background1,
+            attr: {
+                cx: obj.centerx,
+                cy: obj.centery,
+                r: obj.radius,
+                fill: 'gray'
+            }
+        });
+
+        // This smaller black circle turns the gray circle that was just added
+        // into a donut.
+        RGraph.SVG.create({
+            svg: obj.svg,
+            type: 'circle',
+            parent: obj.layers.background1,
+            attr: {
+                cx: obj.centerx,
+                cy: obj.centery,
+                r: obj.radius - obj.properties.donutWidth,
+                fill: 'rgb(181, 225, 233)'
+            }
+        });
+
+        // Add the text label that indicates the 'value' of the first Pie segment
+        RGraph.SVG.text({
+            object: obj,
+            parent: obj.svg.all,
+            text:   obj.data[0] + '%',
+            x:      obj.centerx,
+            y:      obj.centery,
+            halign: 'center',
+            valign: 'center',
+            size:   20,
+            bold:   true,
+            color:  '#47476b'
+        });
+
+        // Add the smaller text label that sits under the main percentage label.
+        RGraph.SVG.text({
+            object: obj,
+            parent: obj.svg.all,
+            text:   'Anxiety',
+            x:      obj.centerx,
+            y:      obj.centery + 15,
+            halign: 'center',
+            valign: 'top',
+            size:   12,
+            bold:   true,
+            color:  '#47476b'
+        });
+    
+    // Use the roundRobin() effect for the red Pie segment.
+    }).roundRobin({frames: 45});
+
+
+
+
+    // Add the second 'meter' that shows Rickys progress
+    new RGraph.SVG.Pie({
+        id: 'chart-container2',
+        data: [50,50],
+        options: {
+            colors: ['Crimson', 'transparent'],
+            donut: true,
+            donutWidth: 10
+        }
+    }).on('draw', function (obj)
+    {
+        RGraph.SVG.create({
+            svg: obj.svg,
+            type: 'circle',
+            parent: obj.layers.background1,
+            attr: {
+                cx: obj.centerx,
+                cy: obj.centery,
+                r: obj.radius,
+                fill: 'gray'
+            }
+        });
+        RGraph.SVG.create({
+            svg: obj.svg,
+            type: 'circle',
+            parent: obj.layers.background1,
+            attr: {
+                cx: obj.centerx,
+                cy: obj.centery,
+                r:  obj.radius - obj.properties.donutWidth,
+                fill: 'rgb(181, 225, 233)'
+            }
+        });
+
+        // Add the text label that indicates the 'value' of the second Pie segment
+        RGraph.SVG.text({
+            object: obj,
+            parent: obj.svg.all,
+            text:   obj.data[0] + '%',
+            x:      obj.centerx,
+            y:      obj.centery,
+            halign: 'center',
+            valign: 'center',
+            size:   20,
+            bold: true,
+            color:  '#47476b'
+        });
+
+        // Add the smaller text label that sits under the main percentage label.
+        RGraph.SVG.text({
+            object: obj,
+            parent: obj.svg.all,
+            text:   'Depression',
+            x:      obj.centerx,
+            y:      obj.centery + 15,
+            halign: 'center',
+            valign: 'top',
+            size:   12,
+            bold: true,
+            color:  '#47476b'
+        });
+    }).roundRobin({frames: 45});
+
+
+
+
+
+    // Add the third 'meter' that shows Freddys progress
+    new RGraph.SVG.Pie({
+        id: 'chart-container3',
+        data: [42,58],
+        options: {
+            colors: ['Crimson', 'transparent'],
+            donut: true,
+            donutWidth: 10
+        }
+    }).on('draw', function (obj)
+    {
+        RGraph.SVG.create({
+            svg: obj.svg,
+            type: 'circle',
+            parent: obj.layers.background1,
+            attr: {
+                cx: obj.centerx,
+                cy: obj.centery,
+                r: obj.radius,
+                fill: 'gray'
+            }
+        });
+        RGraph.SVG.create({
+            svg: obj.svg,
+            type: 'circle',
+            parent: obj.layers.background1,
+            attr: {
+                cx: obj.centerx,
+                cy: obj.centery,
+                r: obj.radius - obj.properties.donutWidth,
+                fill: 'rgb(181, 225, 233)'
+            }
+        });
+
+        // Add the text label that indicates the 'value' of the third Pie segment
+        RGraph.SVG.text({
+            object: obj,
+            parent: obj.svg.all,
+            text:   obj.data[0] + '%',
+            x:      obj.centerx,
+            y:      obj.centery,
+            halign: 'center',
+            valign: 'center',
+            size:   20,
+            bold: true,
+            color:  '#47476b'
+        });
+
+        // Add the smaller text label that sits under the main percentage label.
+        RGraph.SVG.text({
+            object: obj,
+            parent: obj.svg.all,
+            text:   'Tension',
+            x:      obj.centerx,
+            y:      obj.centery + 15,
+            halign: 'center',
+            valign: 'top',
+            size:   12,
+            bold: true,
+            color:  '#47476b'
+        });
+    }).roundRobin({frames: 45});
+
+    </script>
+    
+</body>
+</html>
